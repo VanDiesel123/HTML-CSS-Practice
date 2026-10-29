@@ -1,0 +1,148 @@
+.main-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.main-table td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+.main-table > tbody > tr:first-child {
+    height: 60px;
+}
+
+.main-table > tbody > tr:nth-child(2) {
+    height: 70px;
+}
+
+.main-table > tbody > tr:last-child {
+    height: 25px;
+}
+
+.main-table > tbody > tr:last-child > td {
+    padding: 0;
+}
+
+.main-table td.nested-cell {
+    padding: 0;
+}
+
+.nested-table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.nested-table td {
+    padding: 2px;
+    font-size: 13px;
+}
+.main-table td.nested-cell {
+    position: relative;
+    padding: 0;
+}
+
+.nested-table {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.pib {
+    background-color: #058f8f;
+    color: black;
+}
+
+.group {
+    background-color: #f5f505;
+    color: black;
+}
+
+.pib:hover {
+    background-color: #8f0505;
+    color: white;
+}
+
+.group:hover {
+    background-color: #058f8f;
+    color: black;
+}
+
+/* Загальні властивості кіл */
+
+.circles {
+    width: 300px;
+    height: 240px;
+    margin: 20px 0 40px;
+}
+
+.circle {
+    width: 140px;
+    height: 140px;
+    border: 2px solid black;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: rgba(0, 150, 255, 0.4);
+}
+
+
+/* Спосіб 1*/
+
+.position-method {
+    position: relative;
+}
+
+.position-method .circle {
+    position: absolute;
+}
+
+.position-method .circle:nth-child(1) {
+    top: 15px;
+    left: 30px;
+}
+
+.position-method .circle:nth-child(2) {
+    top: 15px;
+    left: 130px;
+}
+
+.position-method .circle:nth-child(3) {
+    top: 100px;
+    left: 80px;
+}
+
+
+/* Спосіб 2*/
+
+.transform-method {
+    display: grid;
+    place-items: center;
+}
+
+.transform-method .circle {
+    grid-area: 1 / 1;
+}
+
+.transform-method .circle:nth-child(1) {
+    transform: translate(-50px, -35px);
+}
+
+.transform-method .circle:nth-child(2) {
+    transform: translate(50px, -35px);
+}
+
+.transform-method .circle:nth-child(3) {
+    transform: translate(0px, 50px);
+}
+
+.nested-table tr:last-child {
+    height: 25px;
+}
